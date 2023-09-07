@@ -1,0 +1,35 @@
+{
+	"root": true,
+	"extends": ["prettier"],
+	"parserOptions": {
+		"ecmaVersion": 8
+	},
+	"plugins": ["prettier", "security", "node"],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"singleQuote": false,
+				"semi": true,
+				"printWidth": 120,
+				"trailingComma": "none"
+			}
+		],
+		"security/detect-object-injection": "warn",
+		"no-var": "error",
+		"camelcase": "off",
+		"curly": "warn",
+		"eqeqeq": "warn",
+		"no-throw-literal": "warn",
+		"semi": "off",
+		"no-empty": "warn",
+		"no-unused-expressions": [
+			"error",
+			{
+				"allowTernary": true
+			}
+		],
+		"no-use-before-define": "off"
+	},
+	"ignorePatterns": ["./package.json", "./package-lock.json"]
+}
